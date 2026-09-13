@@ -244,8 +244,8 @@
             <span style="text-align:right;font-size:18px;color:#8A9890;transform:{{ p.iconTransform }};transition:transform .25s ease">+</span>
           </div>
           <sc-if value="{{ p.open }}" hint-placeholder-val="{{ false }}">
-            <div style="display:flex;flex-wrap:wrap;gap:26px;padding:4px 6px 28px">
-              <img decoding="async" src="{{ p.img }}" alt="{{ p.name }}" style="flex:1 1 300px;max-width:460px;aspect-ratio:4/3;object-fit:cover;background:#EFEDE6">
+            <div style="display:flex;flex-wrap:wrap;gap:clamp(16px,3vw,26px);padding:4px 0 28px">
+              <img decoding="async" src="{{ p.img }}" alt="{{ p.name }}" style="flex:1 1 min(300px,100%);width:100%;min-width:0;max-width:460px;aspect-ratio:4/3;max-height:min(38vh,345px);object-fit:cover;background:#EFEDE6;border-radius:8px">
               <div style="flex:1 1 220px;min-width:0">
                 <div style="font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#8A9890">Client</div>
                 <div style="font-size:15.5px;font-weight:600;margin-top:6px">{{ p.forr }}</div>
