@@ -10,7 +10,7 @@
 <helmet>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
   html { scroll-behavior: smooth; overflow-x: hidden; }
   body { margin: 0; background: #F7F5F1; color: #14231C; -webkit-font-smoothing: antialiased; font-family: 'Schibsted Grotesk', sans-serif; overflow-x: hidden; }
@@ -18,7 +18,7 @@
   a { color: #1F6F4A; }
   a:hover { color: #14352A; }
   ::selection { background: #C9E0CE; }
-  @keyframes logoIn { from { opacity: 0; transform: scale(.7) rotate(-8deg); } to { opacity: 1; transform: none; } }
+  @keyframes logoIn { 0% { opacity: 0; transform: scale(.4) rotate(-200deg); } 60% { opacity: 1; transform: scale(1.12) rotate(12deg); } 100% { opacity: 1; transform: scale(1) rotate(0deg); } }
   @keyframes heroRise { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
   @media (prefers-reduced-motion: reduce) { [data-hero-rise] { animation: none !important; opacity: 1 !important; transform: none !important; } }
 </style>
@@ -74,8 +74,8 @@
   <div style="position:fixed;top:0;left:0;right:0;z-index:60;padding:14px 16px;pointer-events:none">
     <div ref="{{ navRef }}" style="max-width:1240px;margin:0 auto;padding:10px 12px 10px 16px;display:flex;flex-wrap:nowrap;align-items:center;gap:12px;pointer-events:auto;background:rgba(18,38,28,.34);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.26);border-radius:18px;box-shadow:0 12px 30px -22px rgba(0,0,0,.7);transition:background .35s ease,border-color .35s ease">
       <a href="#top" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:#FDFCF7;margin-right:auto">
-        <img decoding="async" src="images/logo.png" alt="Sivam's Thulir" style="width:34px;height:34px;object-fit:contain;opacity:0;animation:logoIn .7s cubic-bezier(.34,1.4,.5,1) .05s both" data-hero-rise>
-        <span style="font-family:'Schibsted Grotesk',sans-serif;font-weight:600;font-size:21px;letter-spacing:-.01em;opacity:0;animation:heroRise .7s cubic-bezier(.22,.61,.36,1) .22s both" data-hero-rise>Sivam's Thulir</span>
+        <img decoding="async" src="images/logo.png" alt="Sivam's Thulir" style="width:34px;height:34px;object-fit:contain;opacity:0;animation:logoIn 1.15s cubic-bezier(.22,.8,.3,1) .05s both;transition:transform .7s cubic-bezier(.22,.8,.3,1);cursor:pointer" style-hover="transform:rotate(360deg) scale(1.08)" data-hero-rise>
+        <span style="font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(20px,5vw,25px);letter-spacing:-.005em;white-space:nowrap;opacity:0;animation:heroRise .7s cubic-bezier(.22,.61,.36,1) .22s both" data-hero-rise>Sivam's Thulir</span>
       </a>
       <div style="display:{{ navLinks }};gap:20px;font-size:13.5px;font-weight:500;flex-wrap:nowrap;justify-content:flex-end">
         <a href="#impact" style="text-decoration:none;color:#DCE7DE" style-hover="color:#FFFFFF">Impact</a>
